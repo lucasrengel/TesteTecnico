@@ -52,7 +52,7 @@ def selectVendedorDB(cpf):
 
 
 #UPDATE - Atualiza um vendedor pelo cpf e usa uma tupla para verificar se o cpf existe
-def updateVendedorDB(nome, cpf, datansc, email, estado):
+def updateVendedorDB(vendedor, nome, cpf, datansc, email, estado):
     verifica = 'SELECT * FROM tb_vendedores WHERE cpf = %s'
     cursor.execute(verifica, (cpf,))
 
@@ -62,6 +62,10 @@ def updateVendedorDB(nome, cpf, datansc, email, estado):
         cursor.execute(comando, valores)
         conexao.commit()
         print("Vendedor atualizado com sucesso")
+        vendedor.nome = nome
+        vendedor.datansc = datansc
+        vendedor.email = email
+        vendedor.estado = estado
         print()  #quebra de linha
     else:
         print("CPF nao encontrado")
