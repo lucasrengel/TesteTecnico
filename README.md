@@ -3,8 +3,7 @@
 ## Passos do Teste
 
 Pré-requisitos: 
-**Python 3.8 ou superior**
-**MySQL Workbench 8.0 ou superior**
+**Python 3.8 ou superior** e **MySQL Workbench 8.0 ou superior**
 
 1. **Clonar o Repositório:**
    - Clone este repositório em sua máquina local usando o comando:
