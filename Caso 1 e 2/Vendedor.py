@@ -2,6 +2,7 @@ from dataclasses import dataclass
 
 LISTA_VENDEDORES = []
 
+#Criando a classe Vendedor usando o @dataclass
 @dataclass
 class Vendedor:
     nome: str
@@ -17,17 +18,19 @@ class Vendedor:
             f"Email: {self.email}, "
             f"Estado: {self.estado}, \n")
 
-
+#Cria um vendedor
 def createVendedor(vendedor: Vendedor):
     LISTA_VENDEDORES.append(vendedor)
     print("Vendedor adicionado com sucesso\n")
 
+#Imprime um Vendedor ao percorrer a lista e verificar o cpf passado no parametro
 def readVendedor(cpf):
     for vendedor in LISTA_VENDEDORES:
         if vendedor.cpf == cpf:
             return vendedor        
     return "CPF nao Encontrado\n"
         
+#Atualiza um vendedor percorrendo a lista e verificando o cpf passado no parametro
 def updateVendedor(vendedor, nome, cpf, datansc, email, estado):
     for vendedor in LISTA_VENDEDORES:
         if vendedor.cpf == cpf:
@@ -39,6 +42,7 @@ def updateVendedor(vendedor, nome, cpf, datansc, email, estado):
             return
     print("CPF nao encontrado\n")
 
+#Deleta um vendedor percorrendo a lista e verificando se o cpf passado pelo parametro existe
 def deleteVendedor(cpf):
     for i, vendedor in enumerate(LISTA_VENDEDORES):
         if vendedor.cpf == cpf:
@@ -47,6 +51,7 @@ def deleteVendedor(cpf):
             return
     print("CPF nao encontrado\n")
         
+#Imprime todos os vendedores na lista_vendedores
 def getVendedor():
     if LISTA_VENDEDORES:
         for vendedor in LISTA_VENDEDORES:

@@ -5,6 +5,7 @@ def processar_planilha(nome_arquivo):
     # Carrega a planilha
     excel = pd.read_excel(nome_arquivo)
 
+    #Extrai os dados da coluna da linha atual e usa os dados para verificar se um vendedor existe, criar ou atualizar
     for i, linha in excel.iterrows():
         cpf = linha.CPF
         nome = linha.Nome

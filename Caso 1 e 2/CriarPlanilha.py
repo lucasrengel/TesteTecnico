@@ -1,5 +1,6 @@
 import pandas as pd #type: ignore
 
+#Serie de dados ja prontas para a planilha
 dados = [
     ['Lucas', 0, '2005-12-04', 'lucaslangel@hotmail.com', 'SC'],
     ['Sarah', 11077728943, '2004-10-08', 'sarah@gmail.com', 'SC'],
@@ -9,6 +10,10 @@ dados = [
     ['Lucas Rengel', 7037982944, '2005-12-04', 'lucaslangel@hotmail.com', 'SC']
 ]
 
+#criando a planilha ja com os dados e colunas determinados
 criar_planilha = pd.DataFrame(dados, columns=['Nome', 'CPF', 'Data_Nascimento', 'Email', 'Estado'])
+
+#cria o arquivo .xlsx ja na pasta Caso 1 e 2
 criar_planilha.to_excel('Caso 1 e 2/DadosVendedores.xlsx', index=False)
+
 print("Planilha criada com sucesso!")
