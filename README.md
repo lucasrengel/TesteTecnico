@@ -1,8 +1,6 @@
 # Desafio Técnico
 
-## Passos do Teste
-
-Pré-requisitos: 
+## Pré-requisitos: 
 **Python 3.8 ou superior** e **MySQL Workbench 8.0 ou superior**
 
 1. **Clonar o Repositório:**
@@ -37,4 +35,4 @@ Pré-requisitos:
     - Abra o script banco.sql (ou apenas copie e cole codigo dentro do arquivo).
 
 
-#### Desenvolvido por Lucas Rengel.
+### Desenvolvido por Lucas Rengel.
